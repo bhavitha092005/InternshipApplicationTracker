@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Internship Tracker</title>
+
+    <!-- Same font everywhere -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- SAME CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" style="max-width:500px;">
+
+    <h2>Create Account</h2>
+
+    <form onsubmit="register(); return false;">
+
+        <label>Username</label>
+        <input id="username" placeholder="Enter username" required>
+          <br>
+		  <br>
+        <label>Password</label>
+        <input id="password" type="password" placeholder="Enter password" required>
+
+        <div style="text-align:center; margin-top:20px;">
+            <button type="submit">Sign Up</button>
+        </div>
+
+    </form>
+
+    <p style="text-align:center; margin-top:20px;">
+        Already have an account?
+        <a href="index.html"  style="color: white;">Login</a>
+    </p>
+
+    <p id="error" style="text-align:center; color:red; margin-top:10px;"></p>
+
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>

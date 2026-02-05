@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internship Tracker</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- SLIDE 1 (VISIBLE BY DEFAULT) -->
+<section id="welcome" class="slide welcome">
+    <h1>Welcome to <span>Internship Application Tracker</span></h1>
+    <p>Track all your internship applications in one place</p>
+</section>
+
+<!-- SLIDE 2 (HIDDEN INITIALLY) -->
+
+<section id="loginSlide" class="slide login hidden">
+    <div class="login-left">
+        <h2>Internship Tracker!!</h2>
+        <p>
+            Manage applications<br>
+            Track interviews<br>
+            Never miss an offer....
+        </p>
+    </div>
+
+    <div class="login-right">
+        <h3>Login</h3>
+
+        <input id="username" placeholder="Username">
+        <input id="password" type="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p class="link">
+            New user? <a href="signup.html">Create account</a>
+        </p>
+
+        <p id="error"></p>
+    </div>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>
+
+

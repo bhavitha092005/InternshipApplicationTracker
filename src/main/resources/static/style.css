@@ -1,0 +1,102 @@
+/* ---------- GLOBAL ---------- */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #1e3448;
+    color: #cfd8dc;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #243f57;
+    padding: 25px 30px;
+    border-radius: 12px;
+}
+
+/* ---------- HEADINGS ---------- */
+h2 {
+    text-align: center;
+    color: #cfd8dc;
+    margin-bottom: 25px;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    background-color: #2fa4e7;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #4fb3f6;
+}
+
+/* ---------- TOP ACTIONS ---------- */
+.top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ---------- STATUS BUTTONS ---------- */
+.status-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ---------- COUNTS ---------- */
+#counts {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+#counts span {
+    color: #2fa4e7;
+    font-weight: 600;
+}
+
+/* ---------- TABLE ---------- */
+.table-container {
+    background-color: #1e3448;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+
+th {
+    border: 1px solid white;
+    padding: 12px;
+    color: #cfd8dc;
+    font-weight: 600;
+}
+
+td {
+    border: 1px solid white;
+    padding: 12px;
+    color: #2fa4e7;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #243f57;
+}

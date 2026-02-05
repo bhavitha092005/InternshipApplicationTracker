@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Internship Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+
+	    <h2>Internship Application Dashboard</h2>
+
+	    <div class="top-actions">
+	        <button onclick="goAdd()">➕ Add Application</button>
+	        <button onclick="logout()">🚪 Logout</button>
+	    </div>
+
+	    <div id="counts">
+	        Applied: <span id="appliedCount">0</span> |
+	        Interview: <span id="interviewCount">0</span> |
+	        Offer: <span id="offerCount">0</span> |
+	        Rejected: <span id="rejectedCount">0</span>
+	    </div>
+
+	    <div class="status-buttons">
+	        <button onclick="loadStatus('APPLIED')">Applied</button>
+	        <button onclick="loadStatus('INTERVIEW')">Interview</button>
+	        <button onclick="loadStatus('OFFER')">Offer</button>
+	        <button onclick="loadStatus('REJECTED')">Rejected</button>
+	    </div>
+
+	    <div class="table-container">
+	        <table>
+	            <thead>
+	                <tr>
+	                    <th>Company</th>
+	                    <th>Role</th>
+	                    <th>Status</th>
+	                </tr>
+	            </thead>
+	            <tbody id="apps"></tbody>
+	        </table>
+	    </div>
+
+	</div>
+
+	<script src="dashboard.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

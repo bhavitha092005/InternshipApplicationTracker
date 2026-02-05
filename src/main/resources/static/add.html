@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Application</title>
+
+    <!-- Same font as everywhere -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- SAME CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Add Internship Application</h2>
+
+    <form onsubmit="save(); return false;">
+
+        <label>Company Name</label>
+        <input id="company" required>
+
+        <label>Role</label>
+        <input id="role" required>
+
+        <label>Status</label>
+        <select id="status">
+            <option value="APPLIED">APPLIED</option>
+            <option value="INTERVIEW">INTERVIEW</option>
+            <option value="OFFER">OFFER</option>
+            <option value="REJECTED">REJECTED</option>
+        </select>
+
+        <div style="text-align:center; margin-top:20px;">
+            <button type="submit">Save Application</button>
+            <button type="button" onclick="goBack()">Cancel</button>
+        </div>
+
+    </form>
+
+</div>
+
+<script src="add.js"></script>
+<script>
+    function goBack() {
+        window.location.href = "dashboard.html";
+    }
+</script>
+
+</body>
+</html>
+
