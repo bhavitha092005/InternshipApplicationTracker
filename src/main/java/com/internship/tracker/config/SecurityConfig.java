@@ -27,7 +27,7 @@ public class SecurityConfig {
                 		    "/dashboard.js", "/add.js",
                 		    "/auth/**",
                 		    "/applications/**",
-                		    "/logout" // 🔥 THIS LINE FIXES IT
+                		    "/logout" 
                 ).permitAll()
                 .anyRequest().permitAll()
             );

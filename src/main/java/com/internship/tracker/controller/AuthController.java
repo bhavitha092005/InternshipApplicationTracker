@@ -1,6 +1,7 @@
 package com.internship.tracker.controller;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.internship.tracker.entity.User;
@@ -20,40 +21,36 @@ public class AuthController {
         this.encoder = encoder;
     }
 
-    // 🔐 LOGIN (compare hashed password)
     @PostMapping("/login")
-    public User login(@RequestBody User user) {
+    public ResponseEntity<?> login(@RequestBody User user) {
 
         User dbUser = repo.findByUsername(user.getUsername());
 
         if (dbUser == null) {
-            throw new RuntimeException("Invalid credentials");
+            return ResponseEntity.status(401).body("Invalid credentials");
         }
 
-        // 🔥 compare raw password with hashed password
         boolean match = encoder.matches(
                 user.getPassword(),
                 dbUser.getPassword()
         );
 
         if (!match) {
-            throw new RuntimeException("Invalid credentials");
+            return ResponseEntity.status(401).body("Invalid credentials");
         }
 
-        return dbUser;
+        return ResponseEntity.ok(new UserResponse(dbUser));
     }
 
-    // 🆕 SIGNUP (hash password before saving)
     @PostMapping("/register")
-    public User register(@RequestBody User user) {
+    public ResponseEntity<?> register(@RequestBody User user) {
 
         if (repo.findByUsername(user.getUsername()) != null) {
-            throw new RuntimeException("User already exists");
+            return ResponseEntity.badRequest().body("User already exists");
         }
 
-        // 🔥 hash password
         user.setPassword(encoder.encode(user.getPassword()));
 
-        return repo.save(user);
+        return ResponseEntity.ok(new UserResponse(repo.save(user)));
     }
 }

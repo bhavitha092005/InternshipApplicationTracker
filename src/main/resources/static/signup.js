@@ -1,4 +1,14 @@
 function signup() {
+
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const error = document.getElementById("error");
+
+    if (!username.value || !password.value) {
+        error.textContent = "Enter details";
+        return;
+    }
+
     fetch("/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -7,10 +17,19 @@ function signup() {
             password: password.value
         })
     })
-    .then(res => res.json())
+    .then(res => {
+        if (!res.ok) {
+            return res.text().then(text => {
+                throw new Error(text);
+            });
+        }
+        return res.json();
+    })
     .then(user => {
         localStorage.setItem("userId", user.id);
-        window.location.href = "dashboard.html";
+        window.location.href = "index.html";
     })
-    .catch(() => msg.textContent = "User already exists");
+    .catch(err => {
+        error.textContent = err.message;
+    });
 }

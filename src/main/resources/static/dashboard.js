@@ -15,7 +15,7 @@ function goAdd() {
 
 function logout() {
     localStorage.removeItem("userId");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 function loadCounts() {

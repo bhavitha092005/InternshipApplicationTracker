@@ -1,7 +1,11 @@
 function save() {
+
     const userId = localStorage.getItem("userId");
 
-    console.log("Saving application for userId:", userId);
+    if (!userId) {
+        window.location.href = "login.html";
+        return;
+    }
 
     fetch(`/applications/${userId}`, {
         method: "POST",
@@ -16,8 +20,7 @@ function save() {
         if (!res.ok) throw new Error("Save failed");
         return res.json();
     })
-    .then(data => {
-        console.log("Saved application:", data);
+    .then(() => {
         window.location.href = "dashboard.html";
     })
     .catch(err => {
