@@ -105,7 +105,7 @@ internship-application-tracker/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/internship-application-tracker.git
+   git clone https://github.com/bhavitha092005/internship-application-tracker.git
    ```
 
 2. Configure MySQL database in `application.properties`:
@@ -122,7 +122,7 @@ internship-application-tracker/
 4. Open the browser and visit:
 
    ```
-   http://localhost:8080/
+   http://localhost:8081/
    ```
 
 ---
@@ -149,9 +149,8 @@ internship-application-tracker/
 
 ---
 
-## Author
+# Author
+Pala Bhavitha
+Full Stack Developer
 
-Pala Bhavitha  
-Full Stack Developer | Aspiring Software Engineer  
-
-Passionate about building secure and scalable full-stack applications using Java, Spring Boot, and modern web technologies. Continuously learning and exploring new technologies to enhance development and problem-solving skills.
+Focused on designing and developing full-stack web applications with Java, Spring Boot, and Spring Security. Actively advancing skills in React, Next.js, and microservices architecture, with an emphasis on building scalable, secure, and production-ready systems.
