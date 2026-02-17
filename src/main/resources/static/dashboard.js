@@ -4,7 +4,6 @@ if (!userId) {
     window.location.href = "login.html";
 }
 
-// Load counts when dashboard loads
 window.onload = function () {
     loadCounts();
 };

@@ -10,7 +10,7 @@ body {
     color: #cfd8dc;
 }
 
-/* ---------- CONTAINER ---------- */
+/* CONTAINER  */
 .container {
     width: 90%;
     max-width: 1000px;
@@ -20,14 +20,14 @@ body {
     border-radius: 12px;
 }
 
-/* ---------- HEADINGS ---------- */
+/*  HEADINGS  */
 h2 {
     text-align: center;
     color: #cfd8dc;
     margin-bottom: 25px;
 }
 
-/* ---------- BUTTONS ---------- */
+/*  BUTTONS  */
 button {
     background-color: #2fa4e7;
     color: white;
