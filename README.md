@@ -150,7 +150,7 @@ internship-application-tracker/
 ---
 
 # Author
-Pala Bhavitha
+Pala Bhavitha | 
 Full Stack Developer
 
 Focused on designing and developing full-stack web applications with Java, Spring Boot, and Spring Security. Actively advancing skills in React, Next.js, and microservices architecture, with an emphasis on building scalable, secure, and production-ready systems.
