@@ -69,6 +69,14 @@ internship-application-tracker/
 └── README.md
 ```
 
+## 🚀 Application Preview
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
 ---
 
 ## Database Schema
